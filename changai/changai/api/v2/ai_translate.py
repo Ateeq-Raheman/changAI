@@ -11,7 +11,8 @@ def get_settings(doc:str):
     return frappe.get_single("ChangAI Settings")
 
 @frappe.whitelist(allow_guest=False)
-def translate_and_store(docname: str, doctype: str, from_field: str, to_field: str, text: str, to_language: str):    """
+def translate_and_store(docname: str, doctype: str, from_field: str, to_field: str, text: str, to_language: str):
+    """
     Translates text and stores it in a dynamically created field
     """
     meta = get_meta(doctype)
